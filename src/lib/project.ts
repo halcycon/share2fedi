@@ -43,13 +43,6 @@ export const supportedProjects: Record<string, ProjectPublishConfig> = {
 		},
 	},
 	glitchcafe: mastodonConfig,
-	// GoToSocial has no web compose page; Elk's intent page works with GoToSocial accounts.
-	gotosocial: {
-		endpoint: "https://elk.zone/intent/post",
-		params: {
-			text: "text",
-		},
-	},
 	gnusocial: {
 		endpoint: "notice/new",
 		params: {
