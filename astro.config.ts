@@ -11,11 +11,16 @@ import node from "@astrojs/node";
 import browserslist from "browserslist";
 import { browserslistToTargets } from "lightningcss";
 
+const adapter =
+	process.env.S2F_ADAPTER === "cloudflare"
+		? (await import("@astrojs/cloudflare")).default({ imageService: "compile" })
+		: node({
+				mode: "standalone",
+			});
+
 export default defineConfig({
 	output: "server",
-	adapter: node({
-		mode: "standalone",
-	}),
+	adapter,
 	session: false,
 	security: {
 		allowedDomains: [{}],

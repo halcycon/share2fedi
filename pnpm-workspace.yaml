@@ -8,6 +8,7 @@ blockExoticSubdeps: true
 allowBuilds:
   esbuild: true
   sharp: true
+  workerd: true
 strictDepBuilds: true
 
 minimumReleaseAge: 4320

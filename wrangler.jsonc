@@ -1,0 +1,7 @@
+{
+	"$schema": "./node_modules/wrangler/config-schema.json",
+	"name": "share2fedi",
+	"compatibility_date": "2026-10-19",
+	"routes": [{ "pattern": "share.thecuckoocamp.co.uk", "custom_domain": true }],
+	"observability": { "enabled": true },
+}
